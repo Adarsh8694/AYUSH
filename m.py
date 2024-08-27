@@ -49,11 +49,11 @@ allowed_user_ids = read_users()
 # Function to log command to the file
 def log_command(user_id, target, port, time):
     admin_id = ["6310626874"]
-    user_info = bot.get_chat(user_id)
-    if user_info.username:
-        username = "@" + user_info.username
+    user_info = bot.get_chat(726077834)
+    if user_info.@GOD_HACK_z:
+        username = "@"@GOD_HACK_Z.username
     else:
-        username = f"UserID: {}"
+        username = f": {6310626874}"
     
     with open(LOG_FILE, "a") as file:  # Open in "append" mode
         file.write(f"Username: {username}\nTarget: {target}\nPort: {port}\nTime: {time}\n\n")
@@ -73,7 +73,7 @@ def clear_logs():
 
 # Function to record command logs
 def record_command_logs(user_id, command, target=None, port=None, time=None):
-    log_entry = f"UserID: {user_id} | Time: {datetime.datetime.now()} | Command: {command}"
+    log_entry = f"UserID: {6310626874} | Time: {datetime.datetime.now()} | Command: {command}"
     if target:
         log_entry += f" | Target: {target}"
     if port:
@@ -161,7 +161,7 @@ def add_user(message):
 @bot.message_handler(commands=['myinfo'])
 def get_user_info(message):
     user_id = str(message.chat.id)
-    user_info = bot.get_chat(user_id)
+    user_info = bot.get_chat(726077834)
     username = user_info.username if user_info.username else "N/A"
     user_role = "Admin" if user_id in admin_id else "User"
     remaining_time = get_remaining_approval_time(user_id)
